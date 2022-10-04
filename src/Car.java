@@ -7,14 +7,14 @@ public class Car {
     private final int length;
     private final boolean horizontal;
 
-    private final int id;
+    private final char id;
 
     public Car(int x, int y, int length, boolean horizontal) {
         this.p = new Point(x, y);
         this.length = length;
         this.horizontal = horizontal;
         Car.nextId++;
-        this.id = nextId;
+        this.id = (char)nextId;
     }
 
     public void move(int z) {
@@ -46,7 +46,7 @@ public class Car {
         return arr;
     }
 
-    public int getId() {
+    public char getId() {
         return this.id;
     }
 
