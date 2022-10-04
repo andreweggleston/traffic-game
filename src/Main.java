@@ -9,7 +9,7 @@ public class Main {
         );
         Board b = new Board(5, carList);
         System.out.println(b.toString());
-        b.moveCar(new Point(1, 2), 1);
+        b.moveCar(new Point(2, 1), -1);
         System.out.println(b.toString());
     }
 }

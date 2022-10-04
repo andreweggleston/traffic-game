@@ -17,9 +17,8 @@ public class Car {
         this.id = nextId;
     }
 
-    public Point move(int z) {
+    public void move(int z) {
         this.p.inc(this.horizontal, z);
-        return this.p;
     }
 
     public boolean collidesWith(Car c) {
@@ -36,12 +35,12 @@ public class Car {
         Point[] arr = new Point[this.length];
         arr[0] = this.p;
         if (horizontal) {
-            for (int i = 1; i < this.length; i++) {
-                arr[i] = new Point(p.getX() - i, p.getY());
+            for (int i = 0; i < this.length; i++) {
+                arr[i] = new Point(p.getX() + i, p.getY());
             }
         } else {
-            for (int i = 1; i < this.length; i++) {
-                arr[i] = new Point(p.getX(), p.getY() - i);
+            for (int i = 0; i < this.length; i++) {
+                arr[i] = new Point(p.getX(), p.getY() + i);
             }
         }
         return arr;
